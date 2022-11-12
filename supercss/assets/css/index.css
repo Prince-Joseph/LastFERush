@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+nav .nav-links .rm {
+  padding: 4px 8px;
+  background-color: red;
+  color: pink; }
+
+.red {
+  color: red; }
+
+* {
+  font-family: 'Inter';
+  background-color: black;
+  color: white;
+  font-weight: 700; }
+
+nav {
+  display: flex;
+  background-color: red;
+  color: pink; }
+  nav:hover {
+    background-color: pink;
+    color: red; }
+  nav div:nth-child(1) {
+    font-size: 2rem;
+    background-color: inherit; }
+  nav .nav-links {
+    background-color: inherit; }
+    nav .nav-links a {
+      text-decoration: none; }
+
+.parent .box:nth-child(1) {
+  width: 10rem;
+  height: 10rem;
+  background-color: #a7f2a7;
+  margin-top: 10px;
+  background-color: aqua; }
+
+.parent .box:nth-child(2) {
+  width: 20rem;
+  height: 20rem;
+  background-color: #a7f2a7;
+  margin-top: 10px; }
+
+.parent .box:nth-child(3) {
+  width: 7rem;
+  height: 7rem;
+  background-color: #a7f2a7;
+  margin-top: 10px; }
+
+.parent .box:nth-child(4) {
+  width: 16rem;
+  height: 16rem;
+  background-color: #a7f2a7;
+  margin-top: 10px; }

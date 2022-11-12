@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./supercss/assets/css/neelimaa.css">
+</head>
+
+<body>
+ <div class="navbar">
+    
+     <div class="logo">RISE</div>
+     
+     <div id="new" class="nav ">
+        <a >Home</a>
+        <a >About</a>
+        <a >Contact</a>
+        <button class=" btn" onclick="">Read More</button></div>
+     <div id="ham" class="ham"><i class="fa fa-bars"></i></div>
+
+    
+
+ </div>
+ <h1 class="logo2">RISE</h1>
+    <img src="https://images.pexels.com/photos/1534604/pexels-photo-1534604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="no imageee"></img>
+    <div class="end-txt">EMERGENCE OF NEW ERA</div>
+<script>
+    const ham=document.getElementById('ham');
+    const nav = document.getElementById('new');
+    function visible() {
+        nav.classList.toggle('hide')
+         }
+        ham.addEventListener('click',visible);
+</script>
+</body>
+
+</html>

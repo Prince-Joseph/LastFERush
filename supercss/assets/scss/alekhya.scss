@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$primary-color:aliceblue;
+$secondary-color:black;
+%everywhere{
+    background-color: $secondary-color;
+    color: $primary-color;
+    font-family: 'Inter';
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+@mixin sup($size) {
+    
+    
+}
+*{
+    
+    @extend %everywhere;
+
+}
+.navbar{
+    position: relative;
+    z-index: 12;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline:3rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    
+div:nth-child(1){
+    font-size: 2.5rem;
+    letter-spacing: 25px ;
+}
+.read{
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 8px 18px;
+    border:1px;
+}
+.nav_container{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.ham{
+    display: none;
+}
+}
+@keyframes saturation-slow {
+0% {filter: saturate(1);}
+25%{filter: saturate(2);}
+50% {filter: saturate(1);}
+75% {filter: saturate(0);}
+100% {filter: saturate(1);}
+}
+.img-container{
+    animation-name: saturation-slow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+
+    &:hover{
+    /* display: none; */
+    filter: saturate(100);
+    /* transition: all 3s; */
+
+    }
+    img{
+            width: 100%;
+            object-fit: cover;
+            height: 90vh;
+            filter:brightness(60%)
+        }
+    .rise_above{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        padding: 10px 0 0 70px;
+        right: 0;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 88px;
+        letter-spacing: 82px;
+    }
+}
+.your_foot{
+    /* padding-bottom: 4rem; */
+    text-align: center;
+    padding: 2rem;
+    word-spacing: 5px;
+}
+@media screen and (max-width:600px){
+    .nav_container{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        align-items: center;
+       
+        
+    }
+.rise_above{
+    position: absolute;
+    
+    align-items: center !important;
+    justify-content: center;
+
+}
+.img-container{
+    height: 50vh;
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 50vh;
+    }
+    .rise_above{
+        top:50%;
+        right: 24%;
+    }
+}
+
+    .ham{
+        display: block !important;
+        
+    }
+    /* .nav{
+        flex-direction: column !important;
+    } */
+    .hide{
+        display: none !important;
+    }
+    
+}
+@media(max-width:598px){
+    img{
+      object-position: 50%;
+    }
+    
+    
+  }

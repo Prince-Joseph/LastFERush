@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$primary-color: pink;
+$secondary-color: red;
+
+@import 'btn';
+
+* {
+  font-family: 'Inter';
+  background-color: black;
+  color: white;
+  font-weight: 700;
+}
+
+// 1. nesting
+// 2. self
+// 3. Variables
+// 4. pseudo-selectors
+// 5. mixins
+// 6. imports
+
+
+
+
+nav {
+  display: flex;
+  background-color: $secondary-color;
+  color: $primary-color;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+
+  div:nth-child(1) {
+    font-size: 2rem;
+    background-color: inherit;
+  }
+
+  .nav-links {
+    background-color: inherit;
+    a {
+      text-decoration: none;
+    }
+
+    .rm {
+      @extend %btn;
+
+    }
+  }
+
+}
+
+@mixin size($factor){
+  width: $factor * 2rem;
+  height: $factor * 2rem;
+  background-color: rgb(167, 242, 167);
+  margin-top: 10px;
+}
+
+// .parent{
+
+//       .box:nth-child(1){
+//         @include size(1);
+//       }
+
+//       .box:nth-child(2){
+//         @include size(1);
+//       }
+
+//       .box:nth-child(3){
+//         @include size(2);
+//       }
+// }
+.parent{
+
+  .box{
+    
+    &:nth-child(1){
+      @include size(5);
+    background-color:aqua;
+    }
+    &:nth-child(2){
+      @include size(10);
+    }
+    &:nth-child(3){
+      @include size(3.5);
+    }
+    
+    &:nth-child(4){
+      @include size(8);
+    }
+}
+}

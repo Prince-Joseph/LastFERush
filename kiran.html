@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./supercss/assets/css/kiran.css"/>
+    <title>Example</title>
+</head>
+<body>
+    <nav class="parent">
+        <div class="logo"> RISE</div>
+        <div id="contents" class="contents">
+            <div class="contents">
+                <a> Home</a>
+                <a> About</a>
+                <a> Contact</a>
+            </div>
+            <div>
+                <button class="button">Read more</button>
+            </div>
+        </div>
+        <div id = "ham" class="ham"> Ham</div>
+    </nav>
+    <div>
+        <img src="https://images.pexels.com/photos/1534604/pexels-photo-1534604.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="no imageee">
+        <div class = "bigrise">RISE</div>
+    </div>
+</body>
+                                        <!-- YOO, hi prince! its dasavanth-->
+                                        <!-- bye, prince!! -->
+
+<script>
+    const ham_menu = document.getElementById("ham");
+    // const ham_menu = document.getElementsByClassName("ham")[0];
+    const all_contents = document.getElementById("contents");
+
+    function contentsdiss(){
+        all_contents.classList.toggle('hide');
+    }
+    ham_menu.addEventListener("click",contentsdiss);
+    
+</script>
+</html>

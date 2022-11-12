@@ -1,0 +1,38 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel = "stylesheet" href="./supercss/assets/css/nams.css"/>
+</head>
+<body>
+    <nav>
+        <div class = "rise">RISE</div>
+        <div class = "nav-container" id = 'navcon'>
+            <a>Home</a>
+            <a>About</a>
+            <a>Contact</a>
+            <a class="remo"> Read more </a>
+        </div>
+        <div id="ham" class = "ham">ham</div>
+    </nav>
+    <div class="img-container">
+        <img src ="https://images.pexels.com/photos/1534604/pexels-photo-1534604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt = " ">
+        <div class = "new-rise"> RISE </div>
+    </div>
+
+    <script>
+        const ham = document.getElementById("ham");
+        const navcon = document.getElementById("navcon");
+
+        function toggleNavVisibilty(){
+            navcon.classList.toggle('hide');
+        }
+
+        ham.addEventListener("wheel", toggleNavVisibilty);
+    </script>
+</body>
+</html>

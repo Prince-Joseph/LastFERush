@@ -1,0 +1,88 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RISE</title>
+</head>
+<style>
+    *{
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .logo{
+        font-size: 2rem;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 45px ;
+    }
+    .nav-container{
+        display: flex;
+        gap: 1rem;
+    }
+    .ham{
+        display: none;
+    }
+    @media screen and (max-width:600px) {
+        .nav-container{
+            background-color: red;
+            flex-direction: column;
+            /* position: absolute; */
+            /* top: 45px;  */
+        }
+        nav{
+            flex-direction: column !important;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .ham{
+            display: block;
+            order: -1;
+        }
+        
+    }
+    @media screen and (max-width:500px) {
+        .nav-container{
+            background-color: yellow;
+        }
+        
+    }
+
+    .hide{
+        display: none !important;
+    }
+
+</style>
+<body>
+    <nav>
+        <div class="logo">RISE</div>
+        <div class="nav-container" id="navC">
+            <a>Home</a>
+            <a>About</a>
+            <a>Contact</a>
+            <a class="btn white">Read More</a>
+        </div>
+        <div id="ham" class="ham">ham</div>
+    </nav>
+    <script>
+        const ham = document.getElementById("ham");
+        const nav = document.getElementById("navC");
+
+        function toggleNavVisibilty(){
+           nav.classList.toggle('hide');
+        }
+        
+        ham.addEventListener("mouseover",toggleNavVisibilty);
+</script>
+</body>
+</html>
